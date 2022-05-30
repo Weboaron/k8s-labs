@@ -4,7 +4,7 @@ metadata:
   name: load-balancer
 spec:
   selector:
-    app.kubernetes.io/name: app
+    type: app
   ports:
   - name: name-of-service-port
     protocol: TCP
