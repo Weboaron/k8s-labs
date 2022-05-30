@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: bear
+        type: app
     spec:
       containers:
       - name: bear
