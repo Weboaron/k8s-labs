@@ -27,7 +27,6 @@ metadata:
 spec:
   ingressClassName: nginx
   defaultBackend:
-    name: custom-default-backend
     image:
       repository: supergiantkir/animals:hare
       tag: "latest"
