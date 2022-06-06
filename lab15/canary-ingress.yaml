@@ -31,7 +31,6 @@ spec:
       repository: supergiantkir/animals:hare
       tag: "latest"
       pullPolicy: Always
-    port: 80
   rules:
     - http:
        paths:
