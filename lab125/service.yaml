@@ -3,6 +3,14 @@ apiVersion: v1
 metadata:
   name: {{ .Release.Name }}
 spec:
+  container: 
+    resources:
+      requests:
+        memory: {{ .Values.requests.memory }} 
+        cpu: {{ .Values.requests.cpu }} 
+      limits:
+        memory: {{ .Values.limits.memory }} 
+        cpu: {{ .Values.limits.cpu }} 
   selector:
     app: music    
   type: {{ .Values.type }}
