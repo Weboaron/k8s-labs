@@ -6,11 +6,12 @@ metadata:
 spec:
   ingressClassName: nginx
   defaultBackend:
-    enabled: true
-    service:
-      name: default-backend
-      port:
-        number: 80
+    name: custom-default-backend
+    image:
+      repository: supergiantkir/animals:hare
+      tag: "latest"
+      pullPolicy: Always
+    port: 80
   rules:
     - http:
        paths:
@@ -33,11 +34,12 @@ metadata:
 spec:
   ingressClassName: nginx
   defaultBackend:
-    enabled: true
-    service:
-      name: default-backend
-      port:
-        number: 80
+    name: custom-default-backend
+    image:
+      repository: supergiantkir/animals:hare
+      tag: "latest"
+      pullPolicy: Always
+    port: 80
   rules:
     - http:
        paths:
