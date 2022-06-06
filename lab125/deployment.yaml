@@ -3,14 +3,6 @@ kind: Deployment
 metadata:
   name: {{ .Release.Name }} #from RELEASE NAME
 spec:
-  containers: 
-    resources:
-      requests:
-        memory: {{ .Values.requests.memory }} 
-        cpu: {{ .Values.requests.cpu }} 
-      limits:
-        memory: {{ .Values.limits.memory }} 
-        cpu: {{ .Values.limits.cpu }} 
   selector: 
     matchLabels:
       app: music  
@@ -25,3 +17,10 @@ spec:
         image: {{ .Values.image }}:{{ .Values.tag }} 
         ports:
         - containerPort: {{ .Values.target_port }}
+        resources:
+          requests:
+            memory: {{ .Values.requests.memory }} 
+            cpu: {{ .Values.requests.cpu }} 
+          limits:
+            memory: {{ .Values.limits.memory }} 
+            cpu: {{ .Values.limits.cpu }} 
