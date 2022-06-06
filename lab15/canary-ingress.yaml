@@ -5,6 +5,11 @@ metadata:
 
 spec:
   ingressClassName: nginx
+  defaultBackend:
+    service:
+      name: default-backend
+      port:
+        number: 80
   rules:
     - http:
        paths:
@@ -26,6 +31,11 @@ metadata:
     nginx.ingress.kubernetes.io/canary-weight: "10"
 spec:
   ingressClassName: nginx
+  defaultBackend:
+    service:
+      name: default-backend
+      port:
+        number: 80
   rules:
     - http:
        paths:
