@@ -6,7 +6,7 @@ spec:
   selector: 
     matchLabels:
       app: music  
-  replicas: 1  {{ .Values.replicas }}
+  replicas: {{ .Values.replicas }}
   template:
     metadata:
       labels:
