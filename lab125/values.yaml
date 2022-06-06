@@ -1,0 +1,7 @@
+name: spring-music
+type: LoadBalancer
+port: 80
+target_port: 8080
+replicas: 1
+image: yanivomc/spring-music
+tag: latest
